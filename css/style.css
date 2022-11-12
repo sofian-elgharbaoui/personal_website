@@ -1,0 +1,77 @@
+:root {
+  --c-yellow: #ffc107;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.nav-bar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-bar ul li {
+  width: 3rem;
+  height: 3rem;
+  background-color: #2b2a2a;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.nav-bar ul li:hover {
+  background-color: var(--c-yellow);
+  overflow: visible;
+  transition: 0.3s;
+}
+
+.nav-bar ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+  color: #ccc;
+}
+
+.nav-bar ul li:hover i {
+  transition: color 0.3s;
+  color: #fff;
+}
+
+.nav-bar ul li h2 {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  height: 100%;
+  background-color: var(--c-yellow);
+  font-size: 1.2rem;
+  display: grid;
+  place-content: center;
+  padding-left: 1rem;
+  border-radius: 1.5rem;
+  z-index: -1;
+  padding-right: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.nav-bar ul li:hover h2 {
+  padding-right: 3rem;
+  opacity: 1;
+  transition: 0.3s;
+}
