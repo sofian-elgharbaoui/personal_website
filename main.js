@@ -9,7 +9,23 @@ let allSections = document.querySelectorAll("body > div[id]");
 let navBar = document.querySelectorAll(".nav-bar ul li");
 let beforeSpan = document.querySelector(".before");
 let skillsSpan = document.getElementsByClassName("percentage");
-// console.log(skillsH1[0].dataset.perc);
+let moreAboutMe = $(".more-about");
+moreAboutMe.click(function (e) {
+  beforeSpan.style.animationName = "cha-eff";
+  setTimeout(() => {
+    beforeSpan.style.removeProperty("animation-name");
+  }, 1500);
+
+  navBar.forEach((el) => {
+    el.classList.remove("active");
+  });
+  navBar[1].classList.add("active");
+
+  allSections.forEach((sec) => {
+    sec.style.display = "none";
+  });
+  allSections[1].style.display = "block";
+});
 
 for (let j = 0; j < allSections.length; j++) {
   const section = allSections[j];
@@ -54,6 +70,7 @@ for (let i = 0; i < navBar.length; i++) {
     }
   });
 }
+
 navBar[1].addEventListener("click", () => {
   let skillsPer = document.getElementById("skills");
   let started = false; // function hasn't performed yet;

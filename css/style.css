@@ -119,32 +119,44 @@ h4 {
 /* finished styling the COMP-LINK */
 /* start to style the HEADER COMPONENT */
 .header-component {
-  font-size: 4em;
-  height: 3em;
+  font-size: 3.5rem;
+  height: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.header-component .text-in-back {
-  position: absolute;
-  font-size: 8rem;
-  color: var(--c-gray);
-  z-index: -1;
-}
-
 .header-component span {
   color: var(--c-yellow);
 }
 
+.header-component .text-in-back {
+  position: absolute;
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+  color: var(--c-gray);
+  z-index: -1;
+}
+
 @media (max-width: 767px) {
   .header-component {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .header-component .text-in-back {
-    font-size: 5.5rem;
+    font-size: 6rem;
+    letter-spacing: initial;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-component {
+    font-size: 2.5rem;
+  }
+  .header-component .text-in-back {
+    font-size: 4.6rem;
+    /* position: absolute; */
   }
 }
 /* finish from styling the HEADER COMPONENT */
@@ -152,8 +164,8 @@ h4 {
 .nav-bar {
   position: fixed;
   right: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 50%;
+  transform: translateY(50%);
   display: flex;
   justify-content: center;
   z-index: 98;
@@ -234,6 +246,30 @@ h4 {
   opacity: 1;
   transition: var(--main-trans);
 }
+
+@media (max-width: 575px) {
+  .nav-bar {
+    bottom: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    background-color: var(--c-gray);
+  }
+  .nav-bar ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: inherit;
+    padding: 0.5rem 0;
+  }
+  .nav-bar ul li {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #444;
+  }
+  .nav-bar ul li:hover {
+    overflow: hidden;
+  }
+}
 /* finish the NAV-BAR styles */
 /* start the INFO-BAR styles */
 .info-bar {
@@ -254,6 +290,12 @@ h4 {
   border-radius: 1rem;
 
   z-index: 98;
+}
+
+@media (max-width: 575px) {
+  .info-bar {
+    display: none;
+  }
 }
 
 .info-bar .date {
@@ -322,6 +364,18 @@ h4 {
   padding: 0 4.5rem 1rem;
   color: #fff;
 }
+
+@media (max-width: 575px) {
+  #home,
+  #about,
+  #contact,
+  #portfolio,
+  #blog {
+    padding: 1rem;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+  }
+}
 /* finished from styling the container */
 /* start styling the HOME section */
 #home {
@@ -380,6 +434,13 @@ h4 {
 
 .brief-de > p {
   margin: 1rem 0;
+}
+
+@media (max-width: 575px) {
+  .brief-de h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
 }
 /* finished from styling the HOME section */
 /* start styling the ABOUT section */
