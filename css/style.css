@@ -83,6 +83,7 @@ h4 {
   align-items: center;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .comp-link::before {
