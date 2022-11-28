@@ -1,0 +1,93 @@
+#contact > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+#contact .text {
+  flex-basis: 40%;
+}
+
+#contact .contact-form {
+  flex-basis: calc(60% - 1em);
+}
+
+@media (max-width: 991px) {
+  #contact > div {
+    flex-wrap: wrap;
+  }
+
+  #contact .text,
+  #contact .contact-form {
+    flex-basis: 100%;
+  }
+}
+
+#contact .text > p {
+  margin: 1rem 0 2rem;
+}
+
+#contact .text > div {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+#contact .text > div i {
+  color: var(--c-yellow);
+  width: 2.2rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#contact .text > div h4 {
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+#contact .text > div p {
+  text-transform: capitalize;
+}
+
+/* #contact .contact-form form {
+    width: 100%;
+  } */
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  background-color: var(--c-gray);
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  min-height: 3.15rem;
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+  outline: 2px solid var(--c-yellow);
+}
+
+#contact .contact-form textarea {
+  margin: 1rem 0;
+  resize: vertical;
+  min-width: 100%;
+}
+
+#contact .contact-form form > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 767px) {
+  #contact .contact-form form > div {
+    flex-direction: column;
+  }
+}

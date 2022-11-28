@@ -1,0 +1,12 @@
+// import the nav & info bars and global-rules
+@use "sass/layout/global-rules";
+@use "sass/layout/components";
+@use "sass/layout/info-bar";
+@use "sass/layout/nav-bar";
+
+// Import All Project's Pages
+@use "sass/pages/home";
+@use "sass/pages/about";
+@use "sass/pages/portfolio";
+@use "sass/pages/contact";
+@use "sass/pages/blog";

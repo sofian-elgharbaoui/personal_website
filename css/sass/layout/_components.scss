@@ -1,0 +1,112 @@
+/* start to style the COMP-LINK */
+.comp-link {
+  width: fit-content;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid var(--c-yellow);
+  border-radius: calc(1.5rem + 2px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.comp-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-yellow);
+  transition: ease-in-out var(--main-trans);
+}
+
+.comp-link:hover::before {
+  left: 0;
+  transition: ease-in-out var(--main-trans);
+}
+
+.comp-link span {
+  z-index: 2;
+  margin: 0 15px;
+}
+
+.comp-link i {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  background-color: var(--c-yellow);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  z-index: 2;
+}
+/* finished styling the COMP-LINK */
+/* start to style the HEADER COMPONENT */
+.header-component {
+  font-size: 3.5rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-component span {
+  color: var(--c-yellow);
+}
+
+.header-component .text-in-back {
+  position: absolute;
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+  color: var(--c-gray);
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .header-component {
+    font-size: 3rem;
+  }
+
+  .header-component .text-in-back {
+    font-size: 6rem;
+    letter-spacing: initial;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-component {
+    font-size: 2.5rem;
+  }
+  .header-component .text-in-back {
+    font-size: 4.6rem;
+    /* position: absolute; */
+  }
+}
+/* finish from styling the HEADER COMPONENT */
+/* start to style the container */
+#home,
+#about,
+#contact,
+#portfolio,
+#blog {
+  min-height: 100vh;
+  padding: 0 4.5rem 1rem;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  #home,
+  #about,
+  #contact,
+  #portfolio,
+  #blog {
+    padding: 1rem;
+    padding-bottom: 4rem;
+    overflow-x: hidden;
+  }
+}
+/* finished from styling the container */

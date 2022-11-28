@@ -1,0 +1,111 @@
+/* start the NAV-BAR styles */
+.nav-bar {
+  position: fixed;
+  right: 0.75rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: flex;
+  justify-content: center;
+  z-index: 98;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav-bar ul li {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--c-gray);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--main-trans);
+}
+
+.nav-bar ul li.active {
+  background-color: var(--c-yellow);
+}
+
+.nav-bar ul li.active i {
+  color: #fff;
+}
+
+.nav-bar ul li:hover {
+  background-color: var(--c-yellow);
+  overflow: visible;
+  transition: var(--main-trans);
+}
+
+.nav-bar ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+}
+
+.nav-bar ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  transition: color var(--main-trans);
+  color: #ccc;
+}
+
+.nav-bar ul li:hover i {
+  transition: color var(--main-trans);
+  color: #fff;
+}
+
+.nav-bar ul li h2 {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  height: 100%;
+  background-color: var(--c-yellow);
+  font-size: 1.2rem;
+  display: grid;
+  place-content: center;
+  padding-left: 1rem;
+  border-radius: 1.5rem;
+  z-index: -1;
+  padding-right: 0;
+  opacity: 0;
+  transition: var(--main-trans);
+}
+
+.nav-bar ul li:hover h2 {
+  padding-right: 3rem;
+  opacity: 1;
+  transition: var(--main-trans);
+}
+
+@media (max-width: 575px) {
+  .nav-bar {
+    bottom: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    background-color: var(--c-gray);
+  }
+  .nav-bar ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: inherit;
+    padding: 0.5rem 0;
+  }
+  .nav-bar ul li {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #444;
+  }
+  .nav-bar ul li:hover {
+    overflow: hidden;
+  }
+}
+/* finish the NAV-BAR styles */

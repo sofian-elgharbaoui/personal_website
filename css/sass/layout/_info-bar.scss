@@ -1,0 +1,83 @@
+/* start the INFO-BAR styles */
+.info-bar {
+  position: fixed;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  background-color: var(--c-gray);
+  color: #ccc;
+
+  width: 3rem;
+  padding: 1em 0;
+  border-radius: 1rem;
+
+  z-index: 98;
+}
+
+@media (max-width: 575px) {
+  .info-bar {
+    display: none;
+  }
+}
+
+.info-bar .date {
+  text-align: center;
+  font-size: 14px;
+}
+
+.date .day {
+  color: var(--c-yellow);
+  font-size: initial;
+}
+
+.info-bar > p {
+  writing-mode: vertical-lr;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.info-bar > p::after {
+  content: "";
+  height: 3rem;
+  width: 1px;
+  background-color: var(--c-yellow);
+  margin-top: 1rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-bar i {
+  display: block;
+  transition: 0.1s;
+}
+
+.info-bar i:hover {
+  transition: 0.1s;
+  scale: 1.1;
+  rotate: -5deg;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-linkedin {
+  color: #0e76a8;
+}
+
+.fa-whatsapp {
+  color: #128c7e;
+}
+/* finished from the info-bar styles */
