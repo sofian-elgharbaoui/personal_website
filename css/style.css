@@ -12,7 +12,6 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bgc-gray);
-  /* overflow: auto; */
   position: relative;
 }
 
