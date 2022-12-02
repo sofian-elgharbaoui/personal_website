@@ -25,7 +25,7 @@ body .before {
   visibility: hidden;
   z-index: 99;
   -webkit-animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+          animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 @-webkit-keyframes cha-eff {
@@ -70,6 +70,7 @@ h3,
 h4 {
   font-family: "Open Sans", sans-serif;
 }
+
 /*start to style the scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -85,6 +86,7 @@ h4 {
   box-shadow: 0 0 3px var(--bgc-gray) inset;
   border: 2px solid var(--c-gray);
 }
+
 /*finish styling the scrollbar */
 /* start to style the COMP-LINK */
 .comp-link {
@@ -133,6 +135,7 @@ h4 {
   border-radius: 50%;
   z-index: 2;
 }
+
 /* finished styling the COMP-LINK */
 /* start to style the HEADER COMPONENT */
 .header-component {
@@ -188,10 +191,10 @@ h4 {
 
 @media (max-width: 575px) {
   #home,
-  #about,
-  #contact,
-  #portfolio,
-  #blog {
+#about,
+#contact,
+#portfolio,
+#blog {
     padding: 1rem;
     padding-bottom: 4rem;
     overflow-x: hidden;
@@ -232,7 +235,7 @@ h4 {
 
 .info-bar > p {
   -ms-writing-mode: tb-lr;
-  writing-mode: vertical-lr;
+      writing-mode: vertical-lr;
   width: 100%;
   display: flex;
   align-items: center;
@@ -454,12 +457,13 @@ h4 {
 }
 
 /* personal info */
-.per-info {
+#about > .per-info {
   display: flex;
   flex-wrap: wrap;
   row-gap: 4rem;
   -moz-column-gap: 1rem;
-  column-gap: 1rem;
+       column-gap: 1rem;
+  padding-top: 1rem;
 }
 
 .per-info > div {
@@ -665,7 +669,7 @@ h4 {
     flex-direction: column;
   }
   .exp-edu > h2::before,
-  .exp-edu > h2::after {
+.exp-edu > h2::after {
     display: none;
   }
 }
@@ -790,7 +794,7 @@ h4 {
     flex-wrap: wrap;
   }
   #contact .text,
-  #contact .contact-form {
+#contact .contact-form {
     flex-basis: 100%;
   }
 }
@@ -935,4 +939,4 @@ h4 {
 
 .post .descr p:nth-of-type(2) i {
   color: var(--c-yellow);
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -3,11 +3,12 @@
 }
 
 /* personal info */
-.per-info {
+#about > .per-info {
   display: flex;
   flex-wrap: wrap;
   row-gap: 4rem;
   column-gap: 1rem;
+  padding-top: 1rem;
 }
 
 .per-info > div {
