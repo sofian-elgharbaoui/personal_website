@@ -81,7 +81,7 @@ navBar[1].addEventListener("click", () => {
 function increaseNumsOnScroll(section, liOfNums) {
   let started = false; // function hasn't performed yet;
   window.onscroll = () => {
-    if (window.scrollY >= section.offsetTop) {
+    if (window.scrollY >= section.offsetTop + section.offsetTop / 3) {
       if (started == false) {
         [...liOfNums].forEach((el) => {
           let percentage = el.dataset.perc;
