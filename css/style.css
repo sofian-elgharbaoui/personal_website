@@ -620,10 +620,14 @@ h4 {
 }
 
 .skills > div .skill:nth-child(3) div {
-  background-image: conic-gradient(var(--c-yellow) 85%, var(--c-gray) 86%);
+  background-image: conic-gradient(var(--c-yellow) 95%, var(--c-gray) 96%);
 }
 
 .skills > div .skill:nth-child(4) div {
+  background-image: conic-gradient(var(--c-yellow) 85%, var(--c-gray) 86%);
+}
+
+.skills > div .skill:nth-child(5) div {
   background-image: conic-gradient(var(--c-yellow) 25%, var(--c-gray) 26%);
 }
 
