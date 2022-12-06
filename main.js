@@ -1,4 +1,3 @@
-var yellowColor = "#ffc107";
 let dateDiv = document.querySelectorAll(".date *");
 let date = new Date();
 dateDiv[0].innerHTML = date.getDate();
