@@ -415,7 +415,7 @@ h4 {
 }
 
 #home img {
-  width: 22rem;
+  width: 25rem;
   border-radius: 1.5rem;
   box-shadow: 0 0 15px #000;
 }
@@ -437,6 +437,10 @@ h4 {
     margin: auto;
   }
 }
+.brief-de h1 {
+  font-size: 3em;
+}
+
 .brief-de h1 span {
   color: var(--c-yellow);
   text-shadow: 0 0 5px rgba(255, 255, 0, 0.2);
