@@ -17,7 +17,7 @@
   background-color: var(--c-yellow);
   z-index: -1;
   left: -80%;
-  rotate: -20deg;
+  transform: rotate(-20deg);
 }
 
 #home img {
@@ -49,7 +49,6 @@
 
 .brief-de h1 {
   font-size: 3em;
-  // font-weight: 700;
 }
 .brief-de h1 span {
   color: var(--c-yellow);

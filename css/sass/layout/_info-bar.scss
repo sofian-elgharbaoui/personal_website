@@ -65,8 +65,8 @@
 
 .info-bar i:hover {
   transition: 0.1s;
-  scale: 1.1;
-  rotate: -5deg;
+  transform: scale(1.1);
+  transform: rotate(-5deg);
 }
 
 .fa-facebook {

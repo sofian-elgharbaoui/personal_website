@@ -23,6 +23,7 @@
   </head>
   <body>
     <span class="before"></span>
+
     <div class="info-bar">
       <div class="date">
         <p class="day"></p>
@@ -42,6 +43,7 @@
         </a>
       </div>
     </div>
+
     <nav class="nav-bar">
       <ul>
         <li class="active">
@@ -76,6 +78,7 @@
         </li>
       </ul>
     </nav>
+
     <div id="home">
       <picture class="img">
         <source
@@ -100,6 +103,7 @@
         </a>
       </div>
     </div>
+
     <div id="about">
       <h1 class="header-component">
         ABOUT<span>&ThinSpace;ME</span>
@@ -113,22 +117,22 @@
             <p>last name: <span>el gharbaoui</span></p>
             <p>age: <span>19 years</span></p>
             <p>nationality: <span>maroccan</span></p>
-            <p>freelance: <span style="color: #5be85b">available</span></p>
+            <p>freelance: <span>available</span></p>
             <p>address: <span>morocco</span></p>
             <p>
               phone: <span><a href="tel:+212707459677">+212707459677</a></span>
             </p>
             <p>
               email:
-              <span style="text-transform: initial"
-                ><a href="mailto:elgharbaoui.soufiane@outlook.com"
-                  >elgharbaoui.soufiane@outlook.com</a
-                ></span
-              >
+              <span>
+                <a href="mailto:elgharbaoui.soufiane@outlook.com">
+                  elgharbaoui.soufiane@outlook.com
+                </a>
+              </span>
             </p>
             <p>
               skype:
-              <span style="text-transform: initial">elgharbaoui.soufiane</span>
+              <span>elgharbaoui.soufiane</span>
             </p>
             <p>languages: <span>Arabic, English</span></p>
             <a href="#about" class="comp-link">
@@ -234,8 +238,8 @@
                 <h4>Front-end development <span>&ndash; SELF STUDY</span></h4>
                 <p>
                   I was passionate to learn the front-end branch due to its
-                  importance in the web, So that it's what your user or costemer
-                  see when he wrote down your domain name.
+                  importance in the web, So this is what your user or costemer
+                  see when he wrote down your domain name in the browser.
                 </p>
               </div>
             </div>
@@ -271,26 +275,47 @@
         </div>
       </div>
     </div>
+
     <div id="portfolio">
       <h1 class="header-component">
         MY&ThinSpace;<span>PORTFOLIO</span>
         <span class="text-in-back">WORKS</span>
       </h1>
-      <div class="projects">
-        <div class="project">
-          <img src="images/project-1.jpg" alt="" />
-          <h2>who are you</h2>
-        </div>
-        <div class="project">
-          <img src="images/project-2.jpg" alt="" />
-          <h2>hello</h2>
-        </div>
-        <div class="project">
-          <img src="images/project-3.jpg" alt="" />
-          <h2>qdfq</h2>
+      <div class="projects"></div>
+
+      <!-- create a modal for portfolio -->
+      <div class="modal_portfolio">
+        <div class="modal-content">
+          <span class="close_modal">
+            <i class="fa fa-close"></i>
+          </span>
+          <h2 id="project_name"></h2>
+          <div class="modal_details">
+            <div>
+              <i class="fa fa-regular fa-file-text"></i>Project:
+              <span id="project_type"></span>
+            </div>
+            <div>
+              <i class="fa fa-regular fa-user"></i>Client :
+              <span id="project_client"></span>
+            </div>
+            <div>
+              <i class="fa fa-code"></i>Languages :
+              <span id="project_languages"></span>
+            </div>
+            <div>
+              <i class="fa fa-external-link"></i>Preview :
+              <a class="preview-link" id="project_preview" target="_blank"></a>
+            </div>
+          </div>
+          <div class="modal_imgs">
+            <div class="imgs_container"></div>
+            <ul class="imgs_pagination"></ul>
+          </div>
         </div>
       </div>
     </div>
+
     <div id="contact">
       <h1 class="header-component">
         GET IN <span>&ThinSpace;TOUCH</span>
@@ -348,6 +373,7 @@
         </div>
       </div>
     </div>
+
     <div id="blog">
       <h1 class="header-component">
         MY <span>&ThinSpace;BLOG</span>
@@ -404,12 +430,13 @@
         </div>
       </div>
     </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

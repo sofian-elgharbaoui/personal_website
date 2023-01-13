@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "project name": "E-commerce Website",
+    "project type": "Web Application",
+    "languages": "HTML5, CSS3, JS",
+    "libraries": "JQuery",
+    "client": "shop",
+    "url": "https://sofian-elgharbaoui.github.io/e-shop/",
+    "hostname": "e-shop.com",
+    "imgs": [
+      "home-1.jpeg",
+      "shop-1.jpeg",
+      "blog-1.jpeg",
+      "about-1.jpeg",
+      "faqs-1.jpeg",
+      "contact-1.jpeg"
+    ]
+  },
+  {
+    "id": 2,
+    "project name": "Sign-in & Sign-up Page",
+    "project type": "One Page",
+    "languages": "HTML5, CSS3, JS",
+    "libraries": "none",
+    "client": "Themeforest",
+    "url": "https://sofian-elgharbaoui.github.io/beautiful-login-form/",
+    "hostname": "beautiful-login-form.com",
+    "imgs": ["sign form.jpeg"]
+  },
+  {
+    "id": 3,
+    "project name": "Admin Dashbord",
+    "project type": "User Dashboard",
+    "languages": "HTML5, CSS3, JS",
+    "libraries": "JQuery",
+    "client": "Elgharbaoui",
+    "url": "https://sofian-elgharbaoui.github.io/Dashboard_For_The_Admin",
+    "hostname": "envato.com",
+    "imgs": ["faqs-1.jpeg"]
+  },
+  {
+    "id": 4,
+    "project name": "Kasper Project",
+    "project type": "Landing Page",
+    "languages": "HTML5, CSS3, JS",
+    "libraries": "JQuery",
+    "client": "Hellen",
+    "url": "https://sofian-elgharbaoui.github.io/kasper-template/",
+    "hostname": "kasper.com",
+    "imgs": ["kasper-1.jpeg"]
+  }
+]
