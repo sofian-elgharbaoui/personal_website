@@ -11,6 +11,8 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  height: 3em;
+  width: 13em;
 }
 
 .comp-link::before {
@@ -43,6 +45,8 @@
   place-content: center;
   border-radius: 50%;
   z-index: 2;
+  position: absolute;
+  right: 0;
 }
 /* finished styling the COMP-LINK */
 /* start to style the HEADER COMPONENT */

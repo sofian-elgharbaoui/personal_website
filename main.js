@@ -159,7 +159,7 @@ for (let i = 0; i < allProjects.length; i++) {
       let liItem = document.createElement("li");
       projectImgsPag.append(liItem);
     }
-
+    projectImgsPag.children[0].classList.add("active");
     let projectImgsPagItms = [...projectImgsPag.children];
     projectImgsPagItms.forEach((itm, i) => {
       itm.addEventListener("click", () => {
