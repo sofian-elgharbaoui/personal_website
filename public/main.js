@@ -1,4 +1,4 @@
-import allProjectsInfo from "./projects.json" assert { type: "json" };
+import allProjectsInfo from "../projects.json" assert { type: "json" };
 
 let dateDiv = document.querySelectorAll(".date *");
 let date = new Date();
