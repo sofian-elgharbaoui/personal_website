@@ -195,7 +195,7 @@ contactForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    await axios.post("/contact", allFields);
+    await axios.post("/.netlify/functions/app/contact", allFields);
     userName.value = "";
     userEmail.value = "";
     subject.value = "";
