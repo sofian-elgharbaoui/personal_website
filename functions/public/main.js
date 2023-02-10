@@ -1,4 +1,4 @@
-import allProjectsInfo from "../projects.json" assert { type: "json" };
+import allProjectsInfo from "./projects.json" assert { type: "json" };
 
 let dateDiv = document.querySelectorAll(".date *");
 let date = new Date();
@@ -118,7 +118,6 @@ for (let i = 0; i < allProjectsInfo.length; i++) {
 
   projects.appendChild(projectDiv);
 }
-//
 
 let allProjects = document.querySelectorAll(".project");
 
@@ -175,3 +174,33 @@ for (let i = 0; i < allProjects.length; i++) {
     modalCloser.onclick = () => modalPortfolio.classList.remove("active");
   });
 }
+
+/// send email from the cotact form
+let contactForm = document.getElementById("contact_form");
+let allFormInputs = document.getElementsByClassName("field");
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const [userName, userEmail, subject, message] = allFormInputs;
+
+  if (!userName.value || !userEmail.value || !subject.value || !message.value) {
+    return alert("You should fill all fields");
+  }
+
+  const allFields = {
+    name: userName.value,
+    email: userEmail.value,
+    subject: subject.value,
+    message: message.value,
+  };
+
+  try {
+    await axios.post("/contact", allFields);
+    userName.value = "";
+    userEmail.value = "";
+    subject.value = "";
+    message.value = "";
+  } catch (error) {
+    console.error(error);
+  }
+});
