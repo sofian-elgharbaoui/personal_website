@@ -1,11 +1,13 @@
 const transporter = require("../nodemailer/transporter");
 require("dotenv").config();
 
-const sendEmail = (req, res) => {
+const sendEmail = async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   if (!name || !email || !subject || !message) {
-    res.json({ status: "failure", msg: "You must fill all fields" });
+    res
+      .status(400)
+      .json({ status: "failure", msg: "You must fill all fields" });
     return;
   }
 
