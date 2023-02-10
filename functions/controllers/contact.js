@@ -20,7 +20,14 @@ const sendEmail = async (req, res) => {
 
   transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
-      res.status(500).json({ err, msg: "Unable to send email" });
+      res
+        .status(500)
+        .json({
+          from: process.env.EMAIL_ADDRESS,
+          to: process.env.EMAIL_ADDRESS,
+          err,
+          msg: "Unable to send email",
+        });
       return;
     }
     res.status(202).json({ info, msg: "Email sent" });
