@@ -1,17 +1,24 @@
-const transporter = require("../nodemailer/transporter");
 require("dotenv").config();
 
-const sendEmail = async (req, res) => {
+const sendEmail = (req, res) => {
   const { name, email, subject, message } = req.body;
 
   if (!name || !email || !subject || !message) {
-    res
-      .status(400)
-      .json({ status: "failure", msg: "You must fill all fields" });
+    res.status(400).json({ msg: "You must fill all fields" });
     return;
   }
 
-  const mailOptions = {
+  const transporter = nodemailer.createTransport({
+    host: "smtp-mail.outlook.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
+  let mailOptions = {
     from: process.env.EMAIL_ADDRESS,
     to: process.env.EMAIL_ADDRESS,
     subject: subject,
