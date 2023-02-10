@@ -9,7 +9,7 @@ const Router = express.Router();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/info", (req, res) => {
+Router.get("/info", (req, res) => {
   res.json({
     msg: "kqjfmdlkj",
     email: process.env.EMAIL_ADDRESS,
