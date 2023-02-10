@@ -195,11 +195,15 @@ contactForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    await axios.post("/.netlify/functions/app/contact", allFields);
+    const resInfo = await axios.post(
+      "/.netlify/functions/api/contact",
+      allFields
+    );
     userName.value = "";
     userEmail.value = "";
     subject.value = "";
     message.value = "";
+    console.log(resInfo.data);
   } catch (error) {
     console.error(error);
   }
