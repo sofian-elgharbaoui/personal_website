@@ -12,8 +12,5 @@ app.use(express.json());
 const sendEmail = require("./controllers/contact");
 Router.post("/contact", sendEmail);
 
-// const port = 3000;
-// app.listen(port, () => console.log(`Server is listening on port ${port}!`));
-
 app.use("/.netlify/functions/api", Router);
 module.exports.handler = serverless(app);
