@@ -184,7 +184,7 @@ contactForm.addEventListener("submit", async (e) => {
   const [userName, userEmail, subject, message] = allFormInputs;
 
   if (!userName.value || !userEmail.value || !subject.value || !message.value) {
-    return alert("You should fill all fields");
+    return alert("You should fill all fields!");
   }
 
   const allFields = {
@@ -195,10 +195,7 @@ contactForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const resInfo = await axios.post(
-      "/.netlify/functions/api/contact",
-      allFields
-    );
+    const resInfo = await axios.post("/contact", allFields);
     userName.value = "";
     userEmail.value = "";
     subject.value = "";
