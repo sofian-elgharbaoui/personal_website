@@ -205,6 +205,7 @@ contactForm.addEventListener("submit", async (e) => {
     message.value = "";
     console.log(resInfo.data);
   } catch (error) {
+    alert("Please try to connect from email or phone.");
     console.error(error);
   }
 });
