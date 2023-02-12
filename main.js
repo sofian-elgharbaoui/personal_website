@@ -195,7 +195,10 @@ contactForm.addEventListener("submit", async (e) => {
   };
 
   try {
-    const resInfo = await axios.post("/contact", allFields);
+    const resInfo = await axios.post(
+      "https://elgharbaoui-soufiane-api.vercel.app/contact",
+      allFields
+    );
     userName.value = "";
     userEmail.value = "";
     subject.value = "";
