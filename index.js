@@ -10,7 +10,7 @@ app.use(express.json());
 const sendEmail = require("./controllers/contact");
 app.post("/contact", sendEmail);
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   res.status(500).json(err);
 });
 
