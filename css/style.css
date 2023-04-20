@@ -24,19 +24,7 @@ body .before {
   background-color: var(--c-gray);
   visibility: hidden;
   z-index: 99;
-  -webkit-animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-          animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-}
-
-@-webkit-keyframes cha-eff {
-  0% {
-    visibility: visible;
-    top: 0;
-  }
-  100% {
-    visibility: visible;
-    top: 100%;
-  }
+  animation: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 @keyframes cha-eff {
@@ -91,7 +79,6 @@ h4 {
 /* start to style the COMP-LINK */
 .comp-link {
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
   background-color: transparent;
   color: #fff;
@@ -195,10 +182,10 @@ h4 {
 
 @media (max-width: 575px) {
   #home,
-#about,
-#contact,
-#portfolio,
-#blog {
+  #about,
+  #contact,
+  #portfolio,
+  #blog {
     padding: 1rem;
     padding-bottom: 4rem;
     overflow-x: hidden;
@@ -238,8 +225,7 @@ h4 {
 }
 
 .info-bar > p {
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   width: 100%;
   display: flex;
   align-items: center;
@@ -581,6 +567,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
 }
 #about .skills #skills .skill {
   text-align: center;
@@ -617,6 +604,18 @@ h4 {
 #about .skills #skills .skill:nth-child(5) div {
   background-image: conic-gradient(var(--c-yellow) 25%, var(--c-gray) 26%);
 }
+#about .skills #skills .skill:nth-child(6) div {
+  background-image: conic-gradient(var(--c-yellow) 50%, var(--c-gray) 51%);
+}
+#about .skills #skills .skill:nth-child(7) div {
+  background-image: conic-gradient(var(--c-yellow) 50%, var(--c-gray) 51%);
+}
+#about .skills #skills .skill:nth-child(8) div {
+  background-image: conic-gradient(var(--c-yellow) 75%, var(--c-gray) 76%);
+}
+#about .skills #skills .skill:nth-child(9) div {
+  background-image: conic-gradient(var(--c-yellow) 85%, var(--c-gray) 86%);
+}
 #about .skills #skills .skill p {
   margin-top: 1rem;
 }
@@ -652,7 +651,7 @@ h4 {
     flex-direction: column;
   }
   #about .exp-edu > h2::before,
-#about .exp-edu > h2::after {
+  #about .exp-edu > h2::after {
     display: none;
   }
 }
@@ -684,7 +683,6 @@ h4 {
 }
 #about .exp-edu .year {
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
   background-color: var(--c-gray);
   padding: 4px 10px 2px;
@@ -854,7 +852,7 @@ h4 {
     flex-wrap: wrap;
   }
   #contact .text,
-#contact .contact-form {
+  #contact .contact-form {
     flex-basis: 100%;
   }
 }
@@ -991,7 +989,6 @@ h4 {
 
 .post .descr p:nth-of-type(2) {
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
   margin-left: auto;
   font-size: 14px;

@@ -141,6 +141,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1.5rem;
+      justify-items: center;
 
       .skill {
         text-align: center;
@@ -197,6 +198,30 @@
         background-image: conic-gradient(
           var(--c-yellow) 25%,
           var(--c-gray) 26%
+        );
+      }
+      .skill:nth-child(6) div {
+        background-image: conic-gradient(
+          var(--c-yellow) 50%,
+          var(--c-gray) 51%
+        );
+      }
+      .skill:nth-child(7) div {
+        background-image: conic-gradient(
+          var(--c-yellow) 50%,
+          var(--c-gray) 51%
+        );
+      }
+      .skill:nth-child(8) div {
+        background-image: conic-gradient(
+          var(--c-yellow) 75%,
+          var(--c-gray) 76%
+        );
+      }
+      .skill:nth-child(9) div {
+        background-image: conic-gradient(
+          var(--c-yellow) 85%,
+          var(--c-gray) 86%
         );
       }
 
